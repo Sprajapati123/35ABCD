@@ -10,10 +10,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class RadioActivity : AppCompatActivity() {
-    lateinit var radioApple : RadioButton
-    lateinit var radioMango : RadioButton
-    lateinit var radioGrapes : RadioButton
-    lateinit var imageViewRadio : ImageView
+    lateinit var radioApple: RadioButton
+    lateinit var radioMango: RadioButton
+    lateinit var radioGrapes: RadioButton
+    lateinit var imageViewRadio: ImageView
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
