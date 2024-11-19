@@ -15,7 +15,7 @@ class RadioActivity : AppCompatActivity() {
     lateinit var radioGrapes: RadioButton
     lateinit var imageViewRadio: ImageView
 
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
