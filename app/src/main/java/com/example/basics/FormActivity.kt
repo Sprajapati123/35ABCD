@@ -10,25 +10,24 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class FormActivity : AppCompatActivity() {
+
     lateinit var editText: EditText
     lateinit var button: Button
     lateinit var textView: TextView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_form)
 
-        editText = findViewById(R.id.editEmail)
+        editText = findViewById(R.id.editName)
         button = findViewById(R.id.btnSubmit)
         textView = findViewById(R.id.display)
 
         button.setOnClickListener {
-            val email : String = editText.text.toString()
-            textView.text = email
+            val data : String = editText.text.toString()
+            textView.text = data
         }
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

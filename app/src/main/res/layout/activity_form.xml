@@ -8,18 +8,18 @@
     tools:context=".FormActivity">
 
     <EditText
+        android:paddingLeft="10dp"
         android:background="@drawable/sample_shape"
-        android:id="@+id/editEmail"
+        android:id="@+id/editName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="113dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="116dp"
         android:ems="10"
         android:inputType="text"
         android:hint="Enter email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,34 +27,35 @@
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="178dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="166dp"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
 
     <TextView
         android:id="@+id/display"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="74dp"
-        android:layout_marginEnd="190dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="187dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/newText"
+        android:id="@+id/newEditText"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
         android:layout_width="409dp"
+        app:endIconMode="password_toggle"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        app:counterEnabled="true"
-        app:endIconMode="password_toggle"
-        app:counterMaxLength="15"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="82dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,8 +63,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:inputType="textPassword"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:hint="Enter email" />
     </com.google.android.material.textfield.TextInputLayout>
 
