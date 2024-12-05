@@ -35,6 +35,7 @@ class ListActivity : AppCompatActivity(){
 
         listView.adapter = adapter
 
+
         listView.setOnItemClickListener {
                adapterView, view, position, l ->
 
