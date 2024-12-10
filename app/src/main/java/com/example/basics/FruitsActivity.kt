@@ -1,6 +1,7 @@
 package com.example.basics
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -29,6 +30,10 @@ class FruitsActivity : AppCompatActivity() {
         descList.add("This is apple")
         descList.add("This is mango")
         descList.add("This is grapes")
+
+
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
