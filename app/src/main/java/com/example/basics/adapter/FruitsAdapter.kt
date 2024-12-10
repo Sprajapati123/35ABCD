@@ -1,6 +1,7 @@
 package com.example.basics.adapter
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -22,14 +23,17 @@ class FruitsAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FruitsViewHolder {
-
+        val view : View = LayoutInflater.from(context).inflate(R.layout.sample_fruits,parent,false)
+        return FruitsViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-
+        return 3
     }
 
     override fun onBindViewHolder(holder: FruitsViewHolder, position: Int) {
-
+        holder.title.text = nameList[position]
+        holder.desc.text = descList[position]
+        holder.image.setImageResource(imageList[position])
     }
 }
