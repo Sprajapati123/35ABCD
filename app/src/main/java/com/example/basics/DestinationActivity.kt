@@ -15,6 +15,11 @@ class DestinationActivity : AppCompatActivity() {
         binding = ActivityDestinationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val username : String = intent.getStringExtra("username").toString()
+        val password : String = intent.getStringExtra("password").toString()
+
+        binding.outputUsername.text = username
+        binding.outPassword.text = password
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
