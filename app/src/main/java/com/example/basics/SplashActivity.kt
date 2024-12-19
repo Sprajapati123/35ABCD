@@ -1,25 +1,27 @@
 package com.example.basics
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.basics.databinding.ActivityDestinationBinding
 
-class DestinationActivity : AppCompatActivity() {
-    lateinit var binding: ActivityDestinationBinding
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityDestinationBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_splash)
 
-        val username : String = intent.getStringExtra("username").toString()
-        val password : String = intent.getStringExtra("password").toString()
-
-        binding.outputUsername.text = username
-        binding.outPassword .text = password
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(
+                this@SplashActivity,
+                ButtonActivity::class.java
+            )
+            startActivity(intent)
+        },2000)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
