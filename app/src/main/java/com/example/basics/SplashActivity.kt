@@ -28,11 +28,20 @@ class SplashActivity : AppCompatActivity() {
             sharedPreferences.getString("password","").toString()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(
-                this@SplashActivity,
-                ButtonActivity::class.java
-            )
-            startActivity(intent)
+            if(username.isEmpty()){
+                val intent = Intent(
+                    this@SplashActivity,
+                    ButtonActivity::class.java
+                )
+                startActivity(intent)
+            }else{
+                val intent = Intent(
+                    this@SplashActivity,
+                    DestinationActivity::class.java
+                )
+                startActivity(intent)
+            }
+
         },2000)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
