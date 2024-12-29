@@ -16,8 +16,8 @@ import com.example.basics.ui.fragment.ProfileFragment
 import com.example.basics.ui.fragment.SearchFragment
 
 class NavigationActivity : AppCompatActivity() {
-    lateinit var binding: ActivityNavigationBinding
 
+    lateinit var binding: ActivityNavigationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
