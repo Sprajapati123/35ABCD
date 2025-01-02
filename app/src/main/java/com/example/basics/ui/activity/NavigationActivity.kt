@@ -1,6 +1,7 @@
 package com.example.basics.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,10 +20,31 @@ class NavigationActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityNavigationBinding
 
+    override fun onPause() {
+        Log.d("Lifecycle","Onpause -> I am called")
+        super.onPause()
+    }
+
+    override fun onResume() {
+        Log.d("Lifecycle","ONResume -> I am called")
+        super.onResume()
+    }
+
+    override fun onDestroy() {
+        Log.d("Lifecycle","ONDestroy -> I am called")
+        super.onDestroy()
+    }
+
+    override fun onStart() {
+        Log.d("Lifecycle","ONStart -> I am called")
+        super.onStart()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        Log.d("Lifecycle","OnCreate -> I am called")
         binding = ActivityNavigationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
