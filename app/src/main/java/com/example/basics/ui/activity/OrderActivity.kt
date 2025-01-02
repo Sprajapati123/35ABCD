@@ -37,7 +37,7 @@ class OrderActivity : AppCompatActivity() {
 //            tabs,position -> tabs.text = data[position]
              //if icon rakne bhaye
             tabs,position -> tabs.icon = resources.
-                                        getDrawable(icons[position],null)
+                             getDrawable(icons[position],null)
         }.attach()
 
 
